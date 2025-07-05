@@ -36597,8 +36597,8 @@ if(b==null)throw A.h(A.bS("A value must be provided. Supported values: "+J.Tk(a.
 for(s=a.gil(a),s=s.gaz(s);s.B();){r=s.gP(s)
 if(J.d(r.b,b))return r.a}s=A.bS("`"+A.j(b)+"` is not one of the supported values: "+J.Tk(a.geS(a),", "),null)
 throw A.h(s)},
-n3(){switch("production"){case"production":return"https://kelsity-production.up.railway.app/api"
-case"development":default:return"http://localhost:3000/api"}},
+n3(){switch("production"){case"production":return"https://kelsity-production.up.railway.app"
+case"development":default:return"http://localhost:3000"}},
 Fb(){var s=0,r=A.q(t.H),q,p=2,o=[],n,m,l,k,j,i,h,g,f
 var $async$Fb=A.m(function(a,b){if(a===1){o.push(b)
 s=p}while(true)switch(s){case 0:g=$.bgz()
@@ -123806,7 +123806,7 @@ zQ(){var s=0,r=A.q(t.y),q,p=2,o=[],n=this,m,l,k,j,i
 var $async$zQ=A.m(function(a,b){if(a===1){o.push(b)
 s=p}while(true)switch(s){case 0:p=4
 s=7
-return A.k(n.l5(0,"/health",t.z),$async$zQ)
+return A.k(n.l5(0,"/api/health",t.z),$async$zQ)
 case 7:m=b
 k=m.c
 q=k===200
@@ -125420,7 +125420,7 @@ c=n.a
 b=t.N
 a=t.z
 s=7
-return A.k(c.hR("/auth/login",A.a1(["email",a4,"password",a5],b,b),a),$async$mF)
+return A.k(c.hR("/api/auth/login",A.a1(["email",a4,"password",a5],b,b),a),$async$mF)
 case 7:m=a7
 d.ig(0,"Login response status: "+A.j(m.c))
 d.ig(0,"Login response data: "+A.j(m.a))
@@ -125490,7 +125490,7 @@ s=p}while(true)switch(s){case 0:p=4
 j=n.c
 j.ig(0,"Getting current user from API")
 s=7
-return A.k(n.a.l5(0,"/auth/me",t.z),$async$q7)
+return A.k(n.a.l5(0,"/api/auth/me",t.z),$async$q7)
 case 7:m=b
 j.ig(0,"Get current user response status: "+A.j(m.c))
 j.ig(0,"Get current user response data: "+A.j(m.a))
@@ -125544,7 +125544,7 @@ s=m!=null&&m.length!==0?7:8
 break
 case 7:q=10
 s=13
-return A.k(n.a.tl("/auth/logout",t.z),$async$kX)
+return A.k(n.a.tl("/api/auth/logout",t.z),$async$kX)
 case 13:h.d0("Logout API call successful")
 q=3
 s=12
@@ -125618,10 +125618,10 @@ s=p}while(true)switch(s){case 0:p=4
 k=n.c
 k.d0("Attempting to resend verification email to: "+a)
 k.ig(0,"API Base URL: "+A.n3())
-k.ig(0,"Full URL: "+A.n3()+"/auth/resend-verification")
+k.ig(0,"Full URL: "+A.n3()+"/api/auth/resend-verification")
 j=t.N
 s=7
-return A.k(n.a.hR("/auth/resend-verification",A.a1(["email",a],j,j),t.z),$async$JY)
+return A.k(n.a.hR("/api/auth/resend-verification",A.a1(["email",a],j,j),t.z),$async$JY)
 case 7:m=c
 k.ig(0,"Resend verification response: "+A.j(m.a))
 k.ig(0,"Response status code: "+A.j(m.c))
@@ -125684,7 +125684,7 @@ C4(a){return this.aT4(a)},
 aT4(a){var s=0,r=A.q(t.P),q,p=2,o=[],n=this,m,l,k,j,i,h,g,f
 var $async$C4=A.m(function(b,c){if(b===1){o.push(c)
 s=p}while(true)switch(s){case 0:p=4
-j=A.dy(n.a+"/auth-verify-first/request-verification",0,null)
+j=A.dy(n.a+"/api/auth-verify-first/request-verification",0,null)
 i=t.N
 h=A.a1(["Content-Type","application/json"],i,i)
 s=7
@@ -125716,7 +125716,7 @@ rj(a,b,c,d,e){return this.aKu(a,b,c,d,e)},
 aKu(a,b,c,a0,a1){var s=0,r=A.q(t.P),q,p=2,o=[],n=this,m,l,k,j,i,h,g,f,e,d
 var $async$rj=A.m(function(a2,a3){if(a2===1){o.push(a3)
 s=p}while(true)switch(s){case 0:p=4
-h=A.dy(n.a+"/auth-verify-first/complete-registration",0,null)
+h=A.dy(n.a+"/api/auth-verify-first/complete-registration",0,null)
 g=t.N
 f=A.a1(["Content-Type","application/json"],g,g)
 s=7
@@ -125772,7 +125772,7 @@ aU9(a){var s=0,r=A.q(t.P),q,p=2,o=[],n=this,m,l,k,j,i,h
 var $async$Kt=A.m(function(b,c){if(b===1){o.push(c)
 s=p}while(true)switch(s){case 0:p=4
 s=7
-return A.k(A.adP(A.dy(n.a+"/auth-verify-first/verify-intent/"+a,0,null),null),$async$Kt)
+return A.k(A.adP(A.dy(n.a+"/api/auth-verify-first/verify-intent/"+a,0,null),null),$async$Kt)
 case 7:m=c
 j=m
 l=B.aw.c_(0,A.i_(A.hZ(j.e)).c_(0,j.w))
